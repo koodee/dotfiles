@@ -54,19 +54,19 @@ bindsym $mod+d exec dmenu_run
 bindsym $alt+F2 exec rofi -show run -location 2
 
 # locking the screen
-bindsym $ctrl+$alt+l exec lock
+bindsym $ctrl+$alt+l exec ~/.config/yabar/yabar_scripts/lock.sh lock
 
 # take a screenshot
 bindsym --release Print exec --no-startup-id "scrot $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png"
 
 # raise the volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/yabar/yabar_scripts/sound.sh up
 
 # decrease the volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/yabar/yabar_scripts/sound.sh down
 
 # mute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute exec --no-startup-id ~/.config/yabar/yabar_scripts/sound.sh mute
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
