@@ -1,0 +1,8 @@
+#!/bin/sh
+
+xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --mode 1920x1080 --same-as DVI-D-0 --output DVI-I-1 --off --output DVI-I-0 --mode 1600x900 --right-of DVI-D-0 --rotate normal --output DP-1 --off --output DP-0 --off
+
+feh --bg-scale ~/Pictures/wallhaven-287121.png 2>/dev/null
+numlockx on
+xrdb -load ~/.Xdefaults
+/usr/bin/start-pulseaudio-x11
